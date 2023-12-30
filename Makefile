@@ -5,13 +5,13 @@ install:
 
 format:
 	# format
-	# black *.py models/test_*.py patterns/test_*.py
+	black *.py models/*.py tests/*.py
 lint:
 	# lint
-	# pylint --disable=R,C *.py models/test_*.py patterns/test_*.py
+	pylint --disable=R,C *.py models/*py tests/*.py
 test:
 	# test
-	# python -m pytest -vv --cov=models models/test_*.py -cov=patterns patterns/test_*.py --cov=main test_*py
+	python -m pytest -vv --cov=tests/test_*.py
 build:
 	# builds docker 
 run:
