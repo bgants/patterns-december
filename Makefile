@@ -5,17 +5,17 @@ install:
 
 format:
 	# format
-	black *.py itam/*.py
+	# black *.py models/test_*.py patterns/test_*.py
 lint:
 	# lint
-	pylint --disable=R,C *.py itam/*.py
+	# pylint --disable=R,C *.py models/test_*.py patterns/test_*.py
 test:
 	# test
-	python -m pytest -vv --cov=itam itam/test_*.py --cov=main test_*py
+	# python -m pytest -vv --cov=models models/test_*.py -cov=patterns patterns/test_*.py --cov=main test_*py
 build:
 	# builds docker 
 run:
 	# runs
 deploy:
 	# deploys
-	all: install format lint test build run deploy:
+all: install format lint test build run deploy
